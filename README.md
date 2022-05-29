@@ -92,7 +92,6 @@ df.corr()
 plt.subplots(figsize=(12,7))
 sns.heatmap(df.corr(),annot=True)
 
-<<<<<<< HEAD
 #3.Piechart
 
 df1=df.groupby(by=["Ship Mode"]).sum()
@@ -113,24 +112,22 @@ plt.pie(df3["Profit"],colors = colors,labels=labels, autopct = '%0.0f%%')
 plt.show()
 
 #4.Histogram
-=======
-#3.Histogram
->>>>>>> f350251af6b1677d40aa421a0d1927b739ec278c
+
 
 plt.hist(df["Sub-Category"],facecolor="peru",edgecolor="blue",bins=10)
 plt.show()
 
-#4.Bargraph
+#5.Bargraph
 
 plt.bar(df.index,df['Category'])
 plt.show()
 
-#5.Scatterplot
+#6.Scatterplot
 
 plt.scatter(df["Region"],df["Profit"], c ="blue")
 plt.show()              
 
-#6.Boxplot
+#7.Boxplot
 
 plt.boxplot(x="Sales",data=df)
 plt.show()
@@ -167,13 +164,16 @@ plt.show()
 * 2.Heatmap
 ![output](./pic16.png)
 ![output](./pic17.png)
-* 3.Histogram
+* 3.PieChart
+![output](./pic18.png)
+![output](./pic19.png)
+* 4.Histogram
 ![output](./pic20.png)
-* 4.Bargraph
+* 5.Bargraph
 ![output](./pic21.png)
-* 5.Scatterplot
+* 6.Scatterplot
 ![output](./pic22.png)
-* 6.Boxplot
+* 7.Boxplot
 ![output](./pic23.png)
 
 ## RESULT:
