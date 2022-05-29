@@ -94,8 +94,22 @@ sns.heatmap(df.corr(),annot=True)
 
 #3.Piechart
 
-df.groupby(['Sub-Category']).sum().plot(kind='pie', y='Sales',figsize=(10,10),pctdistance=1.7,labeldistance=1.2)
-df.groupby(['Ship Mode']).sum().plot(kind='pie', y='Quantity',figsize=(8,11),pctdistance=1.7,labeldistance=1.2)
+df1=df.groupby(by=["Ship Mode"]).sum()
+labels=[]
+for i in df1.index:
+    labels.append(i)
+colors=sns.color_palette("bright")
+plt.pie(df1["Sales"],labels=labels,autopct="%0.0f%%")
+plt.show()
+
+df3=df.groupby(by=["Category"]).sum()
+labels=[]
+for i in df3.index:
+    labels.append(i) 
+plt.figure(figsize=(8,8))
+colors = sns.color_palette('pastel')
+plt.pie(df3["Profit"],colors = colors,labels=labels, autopct = '%0.0f%%')
+plt.show()
 
 #4.Histogram
 
